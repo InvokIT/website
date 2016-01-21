@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Qvazar <sebjorg@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/InvokIT/website",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
