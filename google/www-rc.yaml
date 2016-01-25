@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: www
+spec:
+  replicas: 1
+  selector:
+    app: www
+  template:
+    metadata:
+      name: www
+      labels:
+        app: www
+    spec:
+      containers:
+      - name: www
+        image: eu.gcr.io/invokit-web/www
+        ports:
+        - containerPort: 80
