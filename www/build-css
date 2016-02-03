@@ -1,0 +1,1 @@
+lessc --clean-css --include-path=www/src/css www/src/css/main.less www/build/css/main.min.css

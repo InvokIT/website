@@ -1,0 +1,1 @@
+jade -o www/build/ www/src/index.jade

@@ -1,0 +1,1 @@
+nodemon -w www/src -x "npm run build"

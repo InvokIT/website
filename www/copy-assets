@@ -1,0 +1,1 @@
+cp -r www/src/images www/build/images

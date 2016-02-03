@@ -1,0 +1,30 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf www/build/* && npm run copy-assets && npm run build-css && npm run build-html",
+    "copy-assets": "./www/copy-assets",
+    "build-css": "rm -rf www/build/css/* && ./www/build-css",
+    "build-html": "rm -rf www/build/*.html && ./www/build-html",
+    "watch": "./www/watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InvokIT/website.git"
+  },
+  "author": "InvokIT <sj@invokit.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InvokIT/website/issues"
+  },
+  "homepage": "https://github.com/InvokIT/website#readme",
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "less": "^2.6.0",
+    "less-plugin-clean-css": "^1.5.1",
+    "nodemon": "^1.8.1"
+  }
+}
