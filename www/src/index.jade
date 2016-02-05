@@ -18,39 +18,73 @@ html
 		link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
 		link(rel="stylesheet", href="https://code.getmdl.io/1.1.0/material.indigo-pink.min.css")
 
+		//- Roboto font
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:400,300')
+
 		//- Our own stuff!
 		link(rel="stylesheet", href="css/main.min.css")
 
 	body
 		main
 
-			article#me
+			article#me.mdl-shadow--2dp
 				header
 					h1 Sebastian J&oslash;rgensen
-					h2 Senior Fullstack Developer
-				img(src="images/sj.jpg")
+					h2 Senior IT Developer
 
-				nav
-					a(href="https://www.linkedin.com/in/sebastianjoergensen", target="_blank")
-						i.fa.fa-linkedin
-						span LinkedIn
-					a(href="https://github.com/InvokIT", target="_blank")
-						i.fa.fa-github
-						span GitHub
-					a(href="#contact")
-						i.fa.fa-envelope
-						span Contact
+				.img
+					img(src="images/sj.jpg")
 
-			article#contact
+				nav.mdl-grid
+					.mdl-cell--2-col
+						a#nav-linkedin.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect(href="https://www.linkedin.com/in/sebastianjoergensen", target="_blank")
+							i.fa.fa-linkedin-square
+						.mdl-tooltip(for="nav-linkedin") LinkedIn
+
+					.mdl-cell--2-col
+						a#nav-github.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect(href="https://github.com/InvokIT", target="_blank")
+							i.fa.fa-github
+						.mdl-tooltip(for="nav-github") GitHub
+
+					.mdl-cell--2-col
+						a#nav-cv.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect(href="http://storage.invokit.dk/SJ%20CV.pdf")
+							i.fa.fa-file-pdf-o
+						.mdl-tooltip(for="nav-cv") Hent CV
+
+					.mdl-cell--2-col
+						a#nav-contact.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect(href="#contact")
+							i.fa.fa-envelope-o
+						.mdl-tooltip(for="nav-contact") Kontakt
+
+			article#contact.mdl-card.mdl-shadow--2dp
 				header
 					h1 Kontakt
-				form(action="http://formspree.io/sj@invokit.dk", method="post", target="_blank")
-					input(type="text", name="name", placeholder="Navn")
-					input(type="text", name="email", placeholder="E-mail")
-					input(type="text", name="_subject", placeholder="Emne")
-					textarea(name="message", placeholder="Besked", rows="6")
+
+				form.mdl-grid(action="http://formspree.io/sj@invokit.dk", method="post", target="_blank")
+
+					div.mdl-textfield.mdl-js-textfield.mdl-cell.mdl-cell--12-col.mdl-cell--6-col-desktop
+						input.mdl-textfield__input(id="contact-name", type="text", name="name")
+						label.mdl-textfield__label(for="contact-name") Navn...
+
+					div.mdl-textfield.mdl-js-textfield.mdl-cell.mdl-cell--12-col.mdl-cell--6-col-desktop
+						input.mdl-textfield__input(id="contact-email", type="text", name="email")
+						label.mdl-textfield__label(for="contact-email") E-mail...
+
+					div.mdl-textfield.mdl-js-textfield.mdl-cell.mdl-cell--12-col
+						input.mdl-textfield__input(id="contact-subject", type="text", name="_subject")
+						label.mdl-textfield__label(for="contact-subject") Emne...
+
+					div.mdl-textfield.mdl-js-textfield.mdl-cell.mdl-cell--12-col
+						textarea.mdl-textfield__input(id="contact-message", name="message", rows="6")
+						label.mdl-textfield__label(for="contact-message") Besked...
+
 					input(type="text", name="_gotcha", style="display:none")
-					button(type="submit"): span Send besked
+					button.mdl-button.mdl-js-button.mdl-js-ripple-effect(type="submit")
+						span Send besked
+
+			footer
+				span.copyright
+					&copy; InvokIT 2016
 
 		//- Scripts
 		script(defer, src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js")

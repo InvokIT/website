@@ -1,1 +1,1 @@
-nodemon -w www/src -x "npm run build"
+nodemon -w www/src -e jade,less -x "npm run build"
